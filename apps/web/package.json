@@ -3,13 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3003",
+    "dev": "node ./server-dev.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node ./server-prod.js",
     "lint": "next lint"
   },
   "dependencies": {
     "clsx": "^1.2.1",
+    "global-config": "workspace:*",
     "next": "^13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
