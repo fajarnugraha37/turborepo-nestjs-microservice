@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
 
-import clsxm from '../../helpers/clsxm';
+import clsxm from '../../lib/clsxm';
 
 const ButtonVariant = ['primary', 'outline', 'ghost', 'light', 'dark'] as const;
 const ButtonSize = ['sm', 'base'] as const;
@@ -18,7 +18,7 @@ type ButtonProps = {
     rightIconClassName?: string;
 } & React.ComponentPropsWithRef<'button'>;
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps> (
     (
         {
             children,
@@ -152,5 +152,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         );
     }
 );
+Button.displayName = Button.name;
 
 export default Button;

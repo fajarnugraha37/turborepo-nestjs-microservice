@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import clsxm from '../../helpers/clsxm';
+import clsxm from '../../lib/clsxm';
 
 import UnstyledLink, {
     UnstyledLinkProps,
@@ -39,5 +39,6 @@ const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
         );
     }
 );
+PrimaryLink.displayName = PrimaryLink.name;
 
 export default PrimaryLink;

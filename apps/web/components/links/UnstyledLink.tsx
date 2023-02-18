@@ -1,7 +1,7 @@
 import Link, { LinkProps } from 'next/link';
 import * as React from 'react';
 
-import clsxm from '../../helpers/clsxm';
+import clsxm from '../../lib/clsxm';
 
 export type UnstyledLinkProps = {
     href: string;
@@ -46,5 +46,6 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
         );
     }
 );
+UnstyledLink.displayName = UnstyledLink.name;
 
 export default UnstyledLink;

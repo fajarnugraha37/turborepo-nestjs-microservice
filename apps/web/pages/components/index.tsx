@@ -10,22 +10,22 @@ import {
     HiPlus,
 } from 'react-icons/hi';
 
-import Button from '../components/buttons/Button';
-import IconButton from '../components/buttons/IconButton';
-import TextButton from '../components/buttons/TextButton';
-import Layout from '../components/layout/Layout';
-import ArrowLink from '../components/links/ArrowLink';
-import ButtonLink from '../components/links/ButtonLink';
-import PrimaryLink from '../components/links/PrimaryLink';
-import UnderlineLink from '../components/links/UnderlineLink';
-import UnstyledLink from '../components/links/UnstyledLink';
-import NextImage from '../components/NextImage';
-import Seo from '../components/Seo';
-import Skeleton from '../components/Skeleton';
+import Button from '../../components/buttons/Button';
+import IconButton from '../../components/buttons/IconButton';
+import TextButton from '../../components/buttons/TextButton';
+import Layout from '../../components/layout/Layout';
+import ArrowLink from '../../components/links/ArrowLink';
+import ButtonLink from '../../components/links/ButtonLink';
+import PrimaryLink from '../../components/links/PrimaryLink';
+import UnderlineLink from '../../components/links/UnderlineLink';
+import UnstyledLink from '../../components/links/UnstyledLink';
+import NextImage from '../../components/NextImage';
+import Seo from '../../components/Seo';
+import Skeleton from '../../components/Skeleton';
 
 type Color = (typeof colorList)[number];
 
-export default function ComponentsPage() {
+export default function ComponentsIndexPage() {
     const [mode, setMode] = React.useState<'dark' | 'light'>('light');
     const [color, setColor] = React.useState<Color>('sky');
     function toggleMode() {

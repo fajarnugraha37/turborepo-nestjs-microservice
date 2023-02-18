@@ -22,8 +22,7 @@ export function openGraph({
         : undefined;
     const ogDesc = encodeURIComponent(description.trim());
 
-    return `https://og.<your-domain>/api/general?siteName=${ogSiteName}&description=${ogDesc}&logo=${ogLogo}${ogTemplateTitle ? `&templateTitle=${ogTemplateTitle}` : ''
-        }`;
+    return `https://og.<your-domain>/api/general?siteName=${ogSiteName}&description=${ogDesc}&logo=${ogLogo}${ogTemplateTitle ? `&templateTitle=${ogTemplateTitle}` : ''}`;
 }
 
 export function getFromLocalStorage(key: string): string | null {

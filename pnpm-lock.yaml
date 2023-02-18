@@ -236,6 +236,7 @@ importers:
   apps/web:
     specifiers:
       '@babel/core': ^7.0.0
+      '@heroicons/react': ^2.0.16
       '@svgr/webpack': ^6.5.1
       '@tailwindcss/forms': ^0.5.3
       '@types/node': ^17.0.12
@@ -253,11 +254,13 @@ importers:
       react-dom: 18.2.0
       react-icons: ^4.7.1
       tailwind-merge: ^1.9.1
+      tailwindconfig: workspace:*
       tailwindcss: ^3.2.7
       tsconfig: workspace:*
       typescript: ^4.5.3
       ui: workspace:*
     dependencies:
+      '@heroicons/react': 2.0.16_react@18.2.0
       clsx: 1.2.1
       global-config: link:../../packages/global-config
       next: 13.1.6_pjwopsidmaokadturxaafygjp4
@@ -278,6 +281,7 @@ importers:
       eslint-config-custom: link:../../packages/eslint-config-custom
       next-sitemap: 2.5.28_next@13.1.6
       postcss: 8.4.21
+      tailwindconfig: link:../../packages/tailwindconfig
       tailwindcss: 3.2.7_postcss@8.4.21
       tsconfig: link:../../packages/tsconfig
       typescript: 4.9.5
@@ -431,11 +435,28 @@ importers:
       tsconfig: link:../tsconfig
       typescript: 4.9.5
 
+  packages/tailwindconfig:
+    specifiers:
+      '@tailwindcss/forms': ^0.5.3
+      autoprefixer: ^10.4.13
+      postcss: ^8.4.21
+      tailwindconfig: workspace:*
+      tailwindcss: ^3.2.7
+    devDependencies:
+      '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
+      autoprefixer: 10.4.13_postcss@8.4.21
+      postcss: 8.4.21
+      tailwindconfig: 'link:'
+      tailwindcss: 3.2.7_postcss@8.4.21
+
   packages/tsconfig:
     specifiers: {}
 
   packages/ui:
     specifiers:
+      '@headlessui/react': ^1.7.11
+      '@heroicons/react': ^2.0.16
+      '@tailwindcss/forms': ^0.5.3
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       autoprefixer: ^10.4.13
@@ -443,10 +464,15 @@ importers:
       eslint-config-custom: workspace:*
       postcss: ^8.4.21
       react: ^18.2.0
+      tailwindconfig: workspace:*
       tailwindcss: ^3.2.7
       tsconfig: workspace:*
       typescript: ^4.5.2
+    dependencies:
+      '@headlessui/react': 1.7.11_react@18.2.0
+      '@heroicons/react': 2.0.16_react@18.2.0
     devDependencies:
+      '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.7
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       autoprefixer: 10.4.13_postcss@8.4.21
@@ -454,6 +480,7 @@ importers:
       eslint-config-custom: link:../eslint-config-custom
       postcss: 8.4.21
       react: 18.2.0
+      tailwindconfig: link:../tailwindconfig
       tailwindcss: 3.2.7_postcss@8.4.21
       tsconfig: link:../tsconfig
       typescript: 4.9.5
@@ -1936,6 +1963,25 @@ packages:
       - '@nestjs/common'
       - rxjs
       - supports-color
+    dev: false
+
+  /@headlessui/react/1.7.11_react@18.2.0:
+    resolution: {integrity: sha512-EaDbVgcyiylhtskZZf4Qb/JiiByY7cYbd0qgZ9xm2pm2X7hKojG0P4TaQYKgPOV3vojPhd/pZyQh3nmRkkcSyw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: ^16 || ^17 || ^18
+      react-dom: ^16 || ^17 || ^18
+    dependencies:
+      client-only: 0.0.1
+      react: 18.2.0
+    dev: false
+
+  /@heroicons/react/2.0.16_react@18.2.0:
+    resolution: {integrity: sha512-x89rFxH3SRdYaA+JCXwfe+RkE1SFTo9GcOkZettHer71Y3T7V+ogKmfw5CjTazgS3d0ClJ7p1NA+SP7VQLQcLw==}
+    peerDependencies:
+      react: '>= 16'
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:

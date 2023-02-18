@@ -2,7 +2,7 @@ import * as React from 'react';
 import { IconType } from 'react-icons';
 import { ImSpinner2 } from 'react-icons/im';
 
-import clsxm from '../../helpers/clsxm';
+import clsxm from '../../lib/clsxm';
 
 const IconButtonVariant = [
     'primary',
@@ -109,5 +109,6 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
         );
     }
 );
+IconButton.displayName = IconButton.name;
 
 export default IconButton;

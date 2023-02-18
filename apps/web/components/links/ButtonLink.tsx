@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { IconType } from 'react-icons';
 
-import clsxm from '../../helpers/clsxm';
+import clsxm from '../../lib/clsxm';
 
 import UnstyledLink, {
     UnstyledLinkProps,
@@ -138,5 +138,6 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         );
     }
 );
+ButtonLink.displayName = ButtonLink.name;
 
 export default ButtonLink;

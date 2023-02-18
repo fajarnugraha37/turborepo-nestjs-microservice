@@ -1,13 +1,20 @@
 {
   "name": "ui",
   "version": "0.0.0",
-  "main": "./index.tsx",
-  "types": "./index.tsx",
+  "main": "./index.ts",
+  "types": "./index.d.ts",
   "license": "MIT",
   "scripts": {
+    "build:ui": "tailwindcss -i ./styles/ui.css -o ./styles/ui.build.css --minify",
+    "build:colors": "tailwindcss -i ./styles/colors.css -o ./styles/colors.build.css --minify",
+    "build": "pnpm run build:ui && pnpm run build:colors",
+    "dev": "pnpm run build",
+    "start": "pnpm run build",
     "lint": "eslint *.ts*"
   },
   "devDependencies": {
+    "tailwindconfig": "workspace:*",
+    "@tailwindcss/forms": "^0.5.3",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.13",
@@ -18,5 +25,9 @@
     "tailwindcss": "^3.2.7",
     "tsconfig": "workspace:*",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.11",
+    "@heroicons/react": "^2.0.16"
   }
 }

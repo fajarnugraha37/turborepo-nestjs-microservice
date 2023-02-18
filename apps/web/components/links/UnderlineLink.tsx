@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import clsxm from '../../helpers/clsxm';
+import clsxm from '../../lib/clsxm';
 
 import UnstyledLink, {
     UnstyledLinkProps,
@@ -24,5 +24,6 @@ const UnderlineLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
         );
     }
 );
+UnderlineLink.displayName = UnderlineLink.name;
 
 export default UnderlineLink;

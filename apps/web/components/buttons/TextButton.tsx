@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import clsxm from '../../helpers/clsxm';
+import clsxm from '../../lib/clsxm';
 
 const TextButtonVariant = ['primary', 'basic'] as const;
 
@@ -48,5 +48,6 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
         );
     }
 );
+TextButton.displayName = TextButton.name;
 
 export default TextButton;
