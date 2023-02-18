@@ -1,0 +1,19 @@
+service:
+  authentication:
+    host: 'localhost'
+    port: 81
+  gateway:
+    host: 'localhost'
+    port: 80
+  logger:
+    host: 'localhost'
+    port: 82
+
+messageBroker:
+  uri: 'amqp://root:root@localhost:5672'
+  connectionInitOptions:
+    wait: true
+    # timeout: 10_000
+    # reject: true
+  enableControllerDiscovery: true
+  defaultRpcTimeout: 5_000

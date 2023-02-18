@@ -1,0 +1,30 @@
+{
+  "name": "message-broker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "lint": "eslint *.ts*"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsconfig": "workspace:*",
+    "@types/node": "^17.0.12",
+    "eslint": "^8.34.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "global-config": "workspace:*",
+    "common-nestjs": "workspace:*",
+    "@golevelup/nestjs-rabbitmq": "^3.4.0",
+    "@nestjs/common": "^9.3.9",
+    "@nestjs/core": "^9.3.9",
+    "@types/amqplib": "^0.10.1",
+    "amqplib": "^0.10.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0"
+  }
+}
