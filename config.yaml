@@ -8,6 +8,9 @@ service:
   logger:
     host: 'localhost'
     port: 82
+  web:
+    host: 'localhost'
+    port: 83
 
 messageBroker:
   uri: 'amqp://root:root@localhost:5672'
