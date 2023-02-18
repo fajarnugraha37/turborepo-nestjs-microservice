@@ -1,5 +1,11 @@
 import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
-import { CHANNELS, DIRECT_EXCHANGE, FANOUT_EXCHANGE, HEADERS_EXCHANGE, TOPIC_EXCHANGE } from './constants';
+import { CHANNELS } from './message-broker.channel';
+import { 
+    DEFAULT_EXCHANGE, DIRECT_EXCHANGE, 
+    FANOUT_EXCHANGE, HEADERS_EXCHANGE, 
+    MATCH_EXCHANGE, RABBITMQ_TRACE_EXCHANGE, 
+    TOPIC_EXCHANGE 
+} from './message-broker.exchange';
 import { DynamicModule } from '@nestjs/common';
 import { config } from "global-config";
 
@@ -11,10 +17,13 @@ export const messageBrokerProvider: DynamicModule = RabbitMQModule.forRoot(Rabbi
 
     defaultExchangeType: TOPIC_EXCHANGE.name,
     exchanges: [
-        TOPIC_EXCHANGE,
+        DEFAULT_EXCHANGE,
         DIRECT_EXCHANGE,
         FANOUT_EXCHANGE,
         HEADERS_EXCHANGE,
+        MATCH_EXCHANGE,
+        RABBITMQ_TRACE_EXCHANGE,
+        TOPIC_EXCHANGE,
     ],
     channels: CHANNELS,
 });

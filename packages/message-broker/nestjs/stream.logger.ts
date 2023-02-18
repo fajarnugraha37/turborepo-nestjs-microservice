@@ -1,6 +1,6 @@
 import { ConsoleLogger, Injectable, LogLevel, Scope } from '@nestjs/common';
 import { AmqpConnection } from '@golevelup/nestjs-rabbitmq';
-import { TOPIC_EXCHANGE } from '../libs/constants';
+import { TOPIC_EXCHANGE } from '../libs/message-broker.exchange';
 
 @Injectable({ scope: Scope.TRANSIENT })
 export class StreamLogger extends ConsoleLogger {
